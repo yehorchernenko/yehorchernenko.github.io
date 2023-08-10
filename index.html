@@ -5,7 +5,7 @@
     <script>
         // Parse the URL to pass paramters to the Lyft app
         var urlParams = new URLSearchParams(window.location.search);
-        var appScheme = 'lyft://' + urlParams;
+        var appScheme = 'lyft://?' + urlParams;
         window.location.replace(appScheme);
     </script>
 </head>
