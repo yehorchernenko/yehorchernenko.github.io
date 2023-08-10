@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // Define the URL scheme of your app
+        var appURLScheme = "com.lyft.ios.rider.debug";
+        
+        // Function to try opening the app
+        function openAppWithScheme() {
+            // Try to open the app using the URL scheme
+            window.location.href = appURLScheme;
+            
+            // If the app does not open, redirect to app store or another page
+            setTimeout(function() {
+                window.location.href = "https://example.com"; // Change this to another URL
+            }, 2000); // Adjust the timeout as needed
+        }
+        
+        // Call the function on page load
+        window.onload = openAppWithScheme;
+    </script>
+</head>
+<body>
+    <p>If the app does not open, <a href="https://example.com">click here</a>.</p>
+</body>
+</html>
