@@ -8,7 +8,9 @@
         // Function to try opening the app
         function openAppWithScheme() {
             // Try to open the app using the URL scheme
-            window.location.href = appURLScheme;
+            var urlParams = new URLSearchParams(window.location.search);
+
+            window.location.href = appURLScheme + urlParams;
             
             // If the app does not open, redirect to app store or another page
             setTimeout(function() {
