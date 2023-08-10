@@ -1,28 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Redirecting...</title>
     <script>
-        // Define the URL scheme of your app
-        var appURLScheme = "lyft://";
-        
-        // Function to try opening the app
-        function openAppWithScheme() {
-            // Try to open the app using the URL scheme
-            var urlParams = new URLSearchParams(window.location.search);
-
-            window.location.href = appURLScheme + urlParams;
-            
-            // If the app does not open, redirect to app store or another page
-            setTimeout(function() {
-                window.location.href = "https://example.com"; // Change this to another URL
-            }, 2000); // Adjust the timeout as needed
-        }
-        
-        // Call the function on page load
-        window.onload = openAppWithScheme;
+        // Parse the URL to pass paramters to the Lyft app
+        var urlParams = new URLSearchParams(window.location.search);
+        var appScheme = 'lyft://' + urlParams;
+        window.location.replace(appScheme);
     </script>
 </head>
 <body>
-    <p>If the app does not open, <a href="https://example.com">click here</a>.</p>
+    Redirecting to Lyft app...
 </body>
 </html>
