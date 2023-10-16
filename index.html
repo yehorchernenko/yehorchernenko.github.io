@@ -4,8 +4,8 @@
     <title>Redirecting...</title>
     <script>
         // Parse the URL to pass paramters to the Lyft app
-        var urlParams = new URLSearchParams(window.location.search);
-        var appScheme = 'lyft://?' + urlParams;
+        // var urlParams = new URLSearchParams(window.location.search);
+        var appScheme = 'https://accounts.google.com/o/oauth2/v2/auth?client_id=75019644270-9hvaec3n0p9mm6hl9v8ioe7nn3p06fjj.apps.googleusercontent.com&response_type=code&scope=https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/calendar.events.readonly&access_type=offline&redirect_uri=https://cdn.lyft.com/static/google-oauth-ios-redirect.html&prompt=consent';
         window.location.replace(appScheme);
     </script>
 </head>
